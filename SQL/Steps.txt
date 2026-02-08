@@ -1,0 +1,21 @@
+Analysis Steps
+
+Setup & Import: Created PostgreSQL tables for ads_daily, product_master, and sales_daily. Imported CSVs and validated row counts and date ranges.
+
+Ads Aggregation: Aggregated ads_daily by product, platform, and date to calculate total ad_spend, clicks, and impressions → ads_daily_agg.
+
+Final Table: Left-joined sales_daily with ads_daily_agg and product_master → final_data. Filled missing ad metrics with 0 for completeness.
+
+Derived Metrics: Computed ROAS, CTR, and average selling price at the category level → category_metrics.
+
+Missing Data Check: Identified 35.68% of rows missing category information, contributing 32.63% of total revenue.
+
+Export: Saved final_data and category_metrics as CSVs for downstream analysis and reporting.
+
+Summary
+
+Consolidated sales, ads, and product data into a single, clean dataset for analysis.
+
+Generated category-level efficiency metrics to evaluate performance effectively.
+
+Highlighted that ~33% of revenue comes from uncategorized products, emphasizing the need to account for unmapped items in insights.
