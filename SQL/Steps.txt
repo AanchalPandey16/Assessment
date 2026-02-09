@@ -6,7 +6,7 @@ Ads Aggregation: Aggregated ads_daily by product, platform, and date to calculat
 
 Final Table: Left-joined sales_daily with ads_daily_agg and product_master → final_data. Filled missing ad metrics with 0 for completeness.
 
-Derived Metrics: Computed ROAS, CTR, and average selling price at the category level → category_metrics.
+Derived Metrics: Computed ROAS (Return on ad spend), CTR(clicking rate), and average selling price at the category level → category_metrics.
 
 Missing Data Check: Identified 35.68% of rows missing category information, contributing 32.63% of total revenue.
 
